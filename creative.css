@@ -1,0 +1,183 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+
+/*logo animation*/
+.container {
+    perspective: 1;
+    position: absolute;
+    margin-left: 10vw;
+    margin-top: 3.5vh;
+}
+
+.container:hover .hover-animation {
+    transform: rotateY(180deg);
+}
+
+.hover-animation {
+    transition: 1s;
+    transform-style: preserve-3d;
+    position: relative;
+}
+
+.logo-front,
+.logo-back {
+    backface-visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.logo-front {
+    background: no-repeat center;
+    z-index: 2;
+}
+
+.logo-back {
+    background: no-repeat center;
+    transform: rotateY(180deg);
+    left: -60px;
+}
+
+/*logo animation end*/
+
+img, p {
+    position: relative;
+}
+
+p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.2em;
+    line-height: 1.95em;
+}
+
+.col-lg-12 {
+    background-color: #e9dfd3;
+    height: 500px;
+    z-index: -2;
+}
+
+.chatbot img{
+    width: 15%;
+    left: 25%;
+    top: 10vh;
+}
+
+.chatbotWelcome {
+    font-family: 'Merriweather', serif;
+    float: right;
+    right: 20%;
+    top: 18vh;
+    font-size: 1.2em;
+}
+
+.big {
+    font-size: 3.9em;
+}
+
+/*Chatbot bottom*/
+.chat_icon img {
+    position: fixed;
+    right: 80px;
+    bottom: 55px;
+    width: 100px;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+.chat_box {
+    position: fixed;
+    right: 150px;
+    bottom: 150px;
+    width: 400px;
+    height: 73vh;
+    background: white;
+    border-top: 55px solid #5984C1;
+    filter: drop-shadow(5px 5px 15px #919191);
+    border-radius: 25px;
+    z-index: 1000;
+    transition: all 0.3s ease-out;
+    transform: scaleY(0);
+}
+
+.chat_box.active {
+    transform: scaleY(1);
+}
+
+.hidden {
+    display: none!important;
+}
+
+.conv-form-wrapper textarea{
+    height: 30px;
+    overflow: hidden;
+    resize: none;
+}
+
+#messages {
+    padding: 30px;
+}
+
+.second, .third, .fourth, .fifth {
+    background-color: rgba(255, 255, 255, 0);
+    margin-top: 10vh;
+}
+
+.second img {
+    width: 50%;
+}
+
+.second p {
+    float: right;
+    right: 8vw;
+    top: 18vh;
+}
+
+.third img {
+    width: 45%;
+    float: right;
+    right: 7.5vw;
+}
+
+.third p {
+    width: 38%;
+    top: 35vh;
+    left: 5vw;
+}
+
+.fourth img {
+    width: 50%;
+    left: 25%;
+    top: 50vh;
+}
+
+.fourth {
+    height: 1400px;
+}
+
+.fourth p {
+    text-align: center;
+    margin-top: 50vh;
+}
+
+.fifth h2 {
+    margin-left: 15vw;
+}
+
+.fifth img {
+    width: 20%;
+    display: inline-block;
+    left: 20%;
+    padding: 20px;
+    top: 5vh;
+}
+
+.fifth {
+    height: 750px;
+}
